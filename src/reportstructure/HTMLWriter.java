@@ -29,7 +29,10 @@ public class HTMLWriter {
 		final PrintWriter writer = new PrintWriter(out);
 		writer.println("<HTML>");
 		writer.println("<HEAD><TITLE>JFreeChart Image Map Demo 2</TITLE></HEAD>");
-		writer.println("<BODY >");		
+		writer.println("<BODY bgcolor=\"green\">");
+		writer.println("<B><Big><center>Report Generator</center></Big></B>");
+		writer.println("</BR>");
+		writer.println("<center>");
 		writer.println("<IMG SRC=\"piechart.png\" "
 				+ "WIDTH=\"600\" HEIGHT=\"400\" BORDER=\"0\" USEMAP=\"#chart\">");     		
 		writer.println("</BODY>");
