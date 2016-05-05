@@ -9,7 +9,5 @@ public class ReportGenerator {
 		int[] arrchartSubjectValues = {61,45,93,31};
 		String CurrentDateandTime = TimeGenerator.getCurrentDateAndTime();
 		HTMLWriter.GenerateHTML(CurrentDateandTime, chartTitle, arrchartSubjects, arrchartSubjectValues);
-//		File destFile = new File(destFile));
-//		Interface.readExcelSheet(destFile);
 	}
 }
