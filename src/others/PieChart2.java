@@ -2,17 +2,7 @@ package others;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
-import java.awt.Desktop;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.io.*;
-import java.text.SimpleDateFormat;
-import java.util.*;
-
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
 import org.jfree.data.general.DefaultPieDataset;

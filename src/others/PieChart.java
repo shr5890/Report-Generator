@@ -16,6 +16,7 @@ class Slice {
       this.color = color;
    }
 }
+@SuppressWarnings("serial")
 class MyComponent extends JComponent {
    Slice[] slices = { 
 		   new Slice(1, Color.cyan), 

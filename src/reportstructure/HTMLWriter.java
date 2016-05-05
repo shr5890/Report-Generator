@@ -7,8 +7,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
 import org.jfree.chart.ChartRenderingInfo;
 import org.jfree.chart.ChartUtilities;

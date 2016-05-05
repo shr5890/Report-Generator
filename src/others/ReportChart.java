@@ -21,6 +21,7 @@ import org.jfree.data.general.DefaultPieDataset;
 import org.jfree.data.general.PieDataset;
 import org.jfree.util.Rotation;
 
+@SuppressWarnings("serial")
 public class ReportChart extends JFrame{
 	public JFreeChart Chart(String chartTitle) {
 		// This will create the dataset 

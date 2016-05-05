@@ -13,6 +13,7 @@ public class PieColors{
 	}        
 
 	public static void setColor(PiePlot plot, PieDataset dataset, Color[] color){ 
+		@SuppressWarnings({ "rawtypes", "unchecked" })
 		List <Comparable> keys = dataset.getKeys(); 
 		int aInt;        
 		for (int i = 0; i < keys.size(); i++){ 
