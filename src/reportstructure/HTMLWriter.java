@@ -28,7 +28,7 @@ public class HTMLWriter {
 		final OutputStream out = new BufferedOutputStream(new FileOutputStream(htmlFile));
 		final PrintWriter writer = new PrintWriter(out);
 		writer.println("<HTML>");
-		writer.println("<HEAD><TITLE>JFreeChart Image Map Demo 2</TITLE></HEAD>");
+		writer.println("<HEAD><TITLE>JFreeChart Image Creation</TITLE></HEAD>");
 		writer.println("<BODY bgcolor=\"#38ACEC\">");
 		writer.println("<B><Big><center>Report Generator</center></Big></B>");
 		writer.println("</BR>");

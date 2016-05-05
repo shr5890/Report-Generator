@@ -1,9 +1,6 @@
 package reportstructure;
 
-import java.io.File;
 import java.io.IOException;
-
-import reportframe.Interface;
 
 public class ReportGenerator {
 	public static void main( String[] args ) throws IOException { 
