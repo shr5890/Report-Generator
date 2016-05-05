@@ -38,6 +38,6 @@ public class HTMLWriter {
 		writer.println("</BODY>");
 		writer.println("</HTML>");
 		writer.close(); 
-		Desktop.getDesktop().browse(htmlFile.toURI());	
+		Desktop.getDesktop().browse(htmlFile.toURI());
 	}
 }
