@@ -7,6 +7,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import org.jfree.chart.ChartRenderingInfo;
 import org.jfree.chart.ChartUtilities;
@@ -17,8 +19,19 @@ import chartobjects.Charts;
 
 public class HTMLWriter {
 	public static void GenerateHTML(String CurrentDateandTime, String chartTitle, String[] arrchartSubjects, int[] arrchartSubjectValues) throws IOException {
+		try{
 		//***************** Creates a HTML File and Opens it *************************
-		File FilePath = new File("D:\\ChartReport\\RUN_"+CurrentDateandTime);       
+		String myCurrentDir = System.getProperty("user.dir")
+	            + File.separator
+	            + System.getProperty("sun.java.command")
+	                    .substring(0, System.getProperty("sun.java.command").lastIndexOf("."))
+	                    .replace(".", File.separator);
+	    System.out.println(myCurrentDir);
+	    File fileToTest = new File(myCurrentDir);
+	    String parentDir = fileToTest.getParent();
+	    System.out.println(parentDir);
+	    String outputDir = parentDir+"\\Output\\ChartReport\\RUN_"+CurrentDateandTime;
+		File FilePath = new File(outputDir); 
 		FilePath.mkdir();
 		File htmlFile = new File(FilePath+"\\Result.html");	        
 		JFreeChart chart = Charts.Chart(chartTitle, arrchartSubjects, arrchartSubjectValues);                          
@@ -39,5 +52,9 @@ public class HTMLWriter {
 		writer.println("</HTML>");
 		writer.close(); 
 		Desktop.getDesktop().browse(htmlFile.toURI());
+		}
+		catch(Exception e){
+			e.getStackTrace();
+		}
 	}
 }
