@@ -39,13 +39,26 @@ public class HTMLWriter {
 		final OutputStream out = new BufferedOutputStream(new FileOutputStream(htmlFile));
 		final PrintWriter writer = new PrintWriter(out);
 		writer.println("<HTML>");
-		writer.println("<HEAD><TITLE>JFreeChart Image Creation</TITLE></HEAD>");
+		writer.println("<HEAD>");
+		writer.println("<style>" +
+		".city {"+
+		    "float: left;"+
+		    "margin: 5px;"+		    		   
+		    "border: 1px solid black;"+
+		    "color: white;"+
+		    "background-color: rgb(36,36,36)"+
+		"}"+ 
+		"</style>");
+		writer.println("<TITLE>JFreeChart Image Creation</TITLE></HEAD>");
 		writer.println("<BODY bgcolor=\"#38ACEC\">");
 		writer.println("<B><Big><center>Report Generator</center></Big></B>");
 		writer.println("</BR>");
 		writer.println("<center>");
+		writer.println("<div class='city'>");
 		writer.println("<IMG SRC=\"piechart.png\" "
-				+ "WIDTH=\"600\" HEIGHT=\"400\" BORDER=\"0\" USEMAP=\"#chart\" align=\"center\">");     		
+				+ "WIDTH=\"600\" HEIGHT=\"400\" BORDER=\"0\" USEMAP=\"#chart\" align=\"center\">");
+		writer.println("</BR><B>Report Chart</B>");
+		writer.println("</div>");
 		writer.println("</BODY>");
 		writer.println("</HTML>");
 		writer.close(); 
