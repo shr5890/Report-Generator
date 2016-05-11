@@ -53,7 +53,7 @@ public class Charts {
         chart.getLegend().setBackgroundPaint(Color.pink);                 
 //        chart.setPadding(new RectangleInsets(2,2,2,2));        
 //        chart.getTitle().setBackgroundPaint(Color.yellow);
-        chart.setBackgroundPaint(new GradientPaint(new Point(0, 0), Color.yellow, new Point(600, 400), Color.cyan));
+        chart.setBackgroundPaint(new GradientPaint(new Point(0, 0), Color.yellow, new Point(600, 0), Color.cyan));
 //        chart.getPlot().setBackgroundPaint(Color.magenta);
 		return chart;
 	} 

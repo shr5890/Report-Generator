@@ -41,24 +41,49 @@ public class HTMLWriter {
 		writer.println("<HTML>");
 		writer.println("<HEAD>");
 		writer.println("<style>" +
-		".city {"+
-		    "float: left;"+
+		".tv {"+
+			  //"position: relative;"+
+			  "width: 632px;"+
+			  "height: 474px;"+
+			  "margin: 20px 0;"+
+			  //"background: blue;"+
+			  "background: linear-gradient(to right, yellow , cyan);"+
+			  "border-radius: 50% / 10%;"+
+			  "color: white;"+
+			  "text-align: center;"+
+			  "text-indent: .1em;"+
+			"}"+
+			".tv:before {"+
+			  "content: '';"+
+			  //"position: absolute;"+
+			  "top: 10%;"+
+			  "bottom: 10%;"+
+			  "right: -5%;"+
+			  "left: -5%;"+
+			  "background: inherit;"+
+			  "border-radius: 5% / 50%;"+
+		".chart {"+
+			//"position: relative"+
+		    "float: center;"+
 		    "margin: 5px;"+		    		   
 		    "border: 1px solid black;"+
-		    "color: white;"+
-		    "background-color: rgb(36,36,36)"+
+		    "color: black;"+
+		    "background-color: #728C00"+
 		"}"+ 
 		"</style>");
-		writer.println("<TITLE>JFreeChart Image Creation</TITLE></HEAD>");
+		writer.println("<TITLE>PIE Chart Report</TITLE></HEAD>");
 		writer.println("<BODY bgcolor=\"#38ACEC\">");
 		writer.println("<B><Big><center>Report Generator</center></Big></B>");
 		writer.println("</BR>");
 		writer.println("<center>");
-		writer.println("<div class='city'>");
+		writer.println("<div class='tv'>");
+		writer.println("</BR></BR></BR>");
+		writer.println("<div class='chart'>");
 		writer.println("<IMG SRC=\"piechart.png\" "
-				+ "WIDTH=\"600\" HEIGHT=\"400\" BORDER=\"0\" USEMAP=\"#chart\" align=\"center\">");
-		writer.println("</BR><B>Report Chart</B>");
+				+ "WIDTH=\"600\" HEIGHT=\"400\" BORDER=\"0\" USEMAP=\"#chart\">");
 		writer.println("</div>");
+		writer.println("</div>");
+		writer.println("</BR>");		
 		writer.println("</BODY>");
 		writer.println("</HTML>");
 		writer.close(); 
